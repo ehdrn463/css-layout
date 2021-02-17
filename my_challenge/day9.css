@@ -1,0 +1,126 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+.sns a {
+  text-decoration: none;
+  font-size: 20px;
+  color: orangered;
+}
+
+div {
+  border: 2px solid red;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  font-size: 1.2rem;
+  font-weight: 500;
+  grid-template-columns: 50px 1fr 1fr 50px;
+  grid-template-rows: 50px 1fr 1fr 50px;
+}
+
+header {
+  background-color: beige;
+  border: 2px solid red;
+  color: red;
+  grid-row: 1 / 2;
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+
+.sidebar {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.left.sidebar {
+  background-color: rgb(236, 93, 49);
+  color: white;
+  grid-row: 2/ 4;
+  grid-column: 1 / 2;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+}
+
+.news-letter {
+  display: flex;
+  align-items: center;
+  color: red;
+  background-color: white;
+  height: 35%;
+}
+
+.sns {
+  display: flex;
+  align-items: center;
+  height: 5%;
+  color: red;
+  background-color: white;
+}
+
+.right.sidebar {
+  background-color: green;
+  color: white;
+  grid-row: 2/ 4;
+  grid-column: -1 / -2;
+}
+
+.order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45%;
+}
+
+.reserver {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55%;
+}
+
+content {
+  grid-row: 2/-2;
+  grid-column: 2/-2;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-position: left, right; */
+  background-repeat: no-repeat;
+  background-size: 50% 100%, cover;
+  background-image: url("./imgs/cow.jpg"), url("./imgs/curry.jpg");
+}
+
+.store {
+  color: white;
+  font-size: 8vw;
+  font-weight: 500;
+  border: none;
+}
+
+footer {
+  grid-row: -1 / -2;
+  grid-column: 1/-1;
+  background-color: beige;
+  color: red;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  border: 2px solid red;
+}
