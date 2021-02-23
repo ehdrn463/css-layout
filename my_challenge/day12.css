@@ -1,0 +1,175 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+* {
+  box-sizing: border-box;
+}
+button {
+  width: 80%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: red;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20fr 0.5fr 6fr;
+}
+
+main {
+  grid-column: 1/2;
+  background-color: orange;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: minmax(150px, 1fr);
+  grid-auto-flow: row;
+}
+
+main .unit {
+  grid-column: 1/ -1;
+  display: grid;
+  grid-template-columns: 1fr 10fr 4fr;
+  grid-gap: 3px;
+  border-top: 3px red solid;
+  border-left: 3px red solid;
+}
+
+.rev {
+  width: 100%;
+  margin-top: 50px;
+  transform: rotate(-90deg);
+}
+
+main .unit:last-child {
+  border-bottom: 3px red solid;
+}
+main .unit .kind {
+  border-right: 3px red solid;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+main .unit .kind span {
+  transform: rotate(-90deg);
+}
+
+main .unit .title {
+  border-right: 3px red solid;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+main .detail {
+  display: grid;
+
+  border-right: 3px red solid;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.unit .detail .spec {
+  font-weight: 500;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.unit .detail a {
+  border-top: 3px red solid;
+}
+
+.web-link {
+  height: 100%;
+  border-top: 3px red solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spec,
+a {
+  display: flex;
+  justify-content: center;
+}
+
+.divider {
+  grid-column: 2/3;
+  background-color: hotpink;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding-top: 20px;
+}
+
+.divider .corp,
+.divider .copyright {
+  grid-row: span 1;
+  display: flex;
+  align-items: center;
+}
+.divider .corp {
+  writing-mode: vertical-rl;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.divider .copyright {
+  display: flex;
+  align-items: flex-end;
+  background-color: blue;
+  padding-bottom: 50px;
+}
+
+.divider .copyright .copy-text {
+  display: flex;
+  width: 100%;
+  transform: rotate(-90deg);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: white;
+}
+
+.sidebar {
+  grid-column: 3/4;
+  background-color: orangered;
+  display: grid;
+  grid-template-rows: 0.1fr 1fr 1fr;
+}
+
+.sidebar .info {
+  grid-row: 2/-1;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(1fr);
+}
+
+.sidebar .header {
+  display: flex;
+  grid-column: 1/ -1;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.sidebar .media {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-top: 3px black solid;
+}
+
+.media .name {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.media .explain {
+  font-weight: 500;
+}
